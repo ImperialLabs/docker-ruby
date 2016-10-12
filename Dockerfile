@@ -2,12 +2,13 @@ FROM slapi/base:latest
 
 MAINTAINER SLAPI Devs
 
-RUN apk add \
+RUN apk update &&\
+    apk add \
     # Packages
     ruby &&\
     # Gems
-    gem install \
-    httparty
+    gem install --no-ri --no-rdoc \
+    httparty && \
     # Cleanup
-    gem cleanup
+    gem cleanup &&\
     rm /var/cache/apk/*
