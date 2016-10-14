@@ -10,4 +10,6 @@ The Ruby slapi script image used to run ruby languages when doing script type.
 FROM slapi/ruby:latest
 ```
 
-# Libraries
+# Included Tools & Libraries
+
+- [httparty](http://johnnunemaker.com/httparty/)
