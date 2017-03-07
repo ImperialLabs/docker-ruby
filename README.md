@@ -13,3 +13,4 @@ FROM slapi/ruby:latest
 # Included Tools & Libraries
 
 - [httparty](http://johnnunemaker.com/httparty/)
+- [json](https://github.com/flori/json)

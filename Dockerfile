@@ -7,10 +7,10 @@ COPY .gemrc /root
 RUN apk update &&\
     apk add \
     # Packages
-    ruby &&\
+    ruby ruby-dev &&\
     # Gems
     gem install \
-    httparty && \
+    httparty json && \
     # Cleanup
     gem cleanup &&\
     rm /var/cache/apk/*
