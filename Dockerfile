@@ -2,12 +2,14 @@ FROM slapi/base:latest
 
 MAINTAINER SLAPI Devs
 
+COPY .gemrc /root
+
 RUN apk update &&\
     apk add \
     # Packages
     ruby &&\
     # Gems
-    gem install --no-ri --no-rdoc \
+    gem install \
     httparty && \
     # Cleanup
     gem cleanup &&\
